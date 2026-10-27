@@ -1,0 +1,11 @@
+// Programa de prueba válido: debe producir solo tokens
+var total = 0;
+var precio = 3.1416;
+var contador_1 = 42;
+var _aux = 0.5;
+
+if (contador_1 = 42) {
+    print(total + precio * 2);
+} else {
+    print(total - 10 / 5);   // comentario al final de línea
+}

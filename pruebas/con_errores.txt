@@ -1,0 +1,9 @@
+// Archivo con errores léxicos para demostrar la recuperación
+var x = 12.3.4;
+var y = 7.;
+var z = @5;
+print(x # y);
+var ñandu = 3;
+var w = .5;
+if (x = 1) { print(z); }
+var ok = 10 // este comentario se ignora
