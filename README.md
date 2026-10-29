@@ -60,7 +60,7 @@ stateDiagram-v2
 
 (→ inicial, * final)
 
-## 4. Funcionamiento del analizador (`lexer.py`)
+## 4. Funcionamiento del analizador (`analizador_lexer.py`)
 
 1. Recorre el texto carácter por carácter llevando línea y columna.
 2. **Ignorables** (manejados por el lexer, no por el AFD): espacios, tabuladores, saltos de línea y comentarios `//` hasta fin de línea.
@@ -80,4 +80,4 @@ Tras cada error el análisis continúa; todos los errores se reportan con línea
 
 ## 6. Módulos
 
-`tokens.py` · `clasificador.py` · `afd.py` · `tabla_simbolos.py` · `lexer.py` · `gui.py` · `main.py` · `pruebas/`
+`tokens.py` · `clasificador.py` · `afd.py` · `tabla_simbolos.py` · `analizador_lexer.py` · `gui.py` · `main.py` · `pruebas/`

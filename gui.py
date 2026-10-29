@@ -2,13 +2,13 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
-from lexer import Lexer
+from analizador_lexer import funcion_lex
 from afd import AFD
 
 
 class AplicacionLexer:
     def __init__(self):
-        self.lexer = Lexer()
+        self.lexer = funcion_lex()
         self.resultado = None
         self.ruta = None
 
@@ -144,7 +144,7 @@ class AplicacionLexer:
         if not ruta:
             return
         try:
-            texto = Lexer.leer_archivo(ruta)
+            texto = funcion_lex.leer_archivo(ruta)
         except OSError as e:
             messagebox.showerror("Error", f"No se pudo abrir el archivo:\n{e}")
             return

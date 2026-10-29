@@ -5,11 +5,11 @@
 """
 import sys
 
-from lexer import Lexer
+from analizador_lexer import funcion_lex
 
 
 def modo_consola(ruta):
-    resultado = Lexer().analizar_archivo(ruta)
+    resultado = funcion_lex().analizar_archivo(ruta)
     print(f"{'Lexema':<16}{'Token':<14}{'Descripción':<20}{'Línea':>6}{'Col':>5}")
     print("-" * 61)
     for t in resultado.tokens:
