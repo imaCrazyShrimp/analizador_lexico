@@ -1,8 +1,3 @@
-"""Punto de entrada.
-
-  python main.py              -> abre la interfaz gráfica
-  python main.py archivo.txt  -> analiza el archivo e imprime en consola
-"""
 import sys
 
 from analizador_lexer import funcion_lex

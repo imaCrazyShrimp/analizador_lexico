@@ -1,10 +1,8 @@
-"""Definición de tokens, palabras reservadas y errores léxicos."""
 from dataclasses import dataclass
 from enum import Enum, auto
 
 
 class TipoToken(Enum):
-    """Tipos de token. El nombre del miembro es el nombre oficial del token."""
     TOKEN_VAR = auto()
     TOKEN_PRINT = auto()
     TOKEN_IF = auto()
@@ -29,8 +27,7 @@ DESCRIPCIONES = {
     TipoToken.TOKEN_DELIM: "Delimitador",
 }
 
-# Palabras reservadas: el AFD las reconoce como identificadores y el
-# analizador consulta este diccionario después de aceptar un identificador.
+# Palabras reservadas
 PALABRAS_RESERVADAS = {
     "var": TipoToken.TOKEN_VAR,
     "print": TipoToken.TOKEN_PRINT,

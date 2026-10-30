@@ -1,9 +1,3 @@
-"""AFD minimizado (7 estados + estado pozo) tal como aparece en el diagrama.
-
-Estados: A (inicial), B (identificador), C (entero), J (tras el punto),
-K (decimal), E (operador), F (delimitador) y TR (pozo/trampa).
-Finales: B, C, E, F, K.
-"""
 from tokens import TipoToken
 
 ESTADO_INICIAL = "A"
@@ -11,7 +5,6 @@ POZO = "TR"
 ESTADOS = ["A", "B", "C", "E", "F", "J", "K", POZO]
 ALFABETO = ["L", "D", "_", ".", "O", "DEL"]
 
-# Solo se listan las transiciones dibujadas; toda otra va al pozo TR.
 TRANSICIONES = {
     ("A", "L"): "B",
     ("A", "_"): "B",
@@ -42,7 +35,6 @@ FINALES = {
 
 
 class AFD:
-    """Motor mínimo: solo sabe moverse entre estados y consultar finales."""
 
     def __init__(self, transiciones=TRANSICIONES, inicial=ESTADO_INICIAL,
                  finales=FINALES, pozo=POZO):
@@ -61,7 +53,6 @@ class AFD:
         return self.finales[estado]
 
     def tabla_transiciones(self):
-        """Devuelve (encabezado, filas) de la tabla completa, para mostrarla."""
         encabezado = ["Estado"] + ALFABETO
         filas = []
         for estado in ESTADOS:

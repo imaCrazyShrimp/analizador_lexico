@@ -1,9 +1,3 @@
-"""Convierte un caracter real en un símbolo del alfabeto del AFD.
-
-No se usan expresiones regulares ni métodos como str.isalpha(), porque
-estos aceptan letras con acento (ñ, á) y dígitos no ASCII que NO forman
-parte del alfabeto definido.
-"""
 
 OPERADORES = ("+", "-", "*", "/", "=")
 DELIMITADORES = ("(", ")", ";", "{", "}")
@@ -18,7 +12,6 @@ def es_digito(c):
 
 
 class Clasificador:
-    """Alfabeto: L (letra), D (dígito), _, ., O (operador), DEL (delimitador)."""
 
     def clasificar(self, c):
         if es_letra(c):

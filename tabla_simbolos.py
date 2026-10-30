@@ -1,4 +1,3 @@
-"""Tabla de símbolos: palabras reservadas (precargadas) e identificadores."""
 from dataclasses import dataclass
 from typing import Optional
 

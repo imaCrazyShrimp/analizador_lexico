@@ -1,4 +1,3 @@
-"""Interfaz gráfica (Tkinter): editor, tabla de tokens y consola de errores."""
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 

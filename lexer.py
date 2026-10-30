@@ -1,12 +1,3 @@
-"""Motor de escaneo manual (sin regex, sin Flex/Lex).
-
-El analizador maneja por sí mismo lo que el AFD no reconoce:
-  - ignorables: espacios, tabuladores, saltos de línea y comentarios //
-  - caracteres fuera del alfabeto
-  - números mal formados (12.3.4, 7., .5)
-El AFD reconoce los tokens usando "máxima coincidencia": avanza todo lo
-que puede y recuerda el último estado final por el que pasó.
-"""
 from dataclasses import dataclass, field
 from typing import List
 
@@ -109,8 +100,6 @@ class Lexer:
         return resultado
 
     def _leer_mas_largo(self, texto, inicio):
-        """Corre el AFD desde 'inicio'. Devuelve (fin, estado_final) del
-        prefijo más largo aceptado, o (None, None) si no hay ninguno."""
         estado = self.afd.inicial
         ultimo_fin = None
         ultimo_estado = None
@@ -130,7 +119,6 @@ class Lexer:
 
     @staticmethod
     def _fin_de_numero(texto, inicio):
-        """Índice donde termina la racha de dígitos y puntos desde 'inicio'."""
         j = inicio
         while j < len(texto) and (es_digito(texto[j]) or texto[j] == "."):
             j += 1
