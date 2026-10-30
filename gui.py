@@ -12,6 +12,11 @@ class AplicacionLexer:
         self.ruta = None
 
         self.root = tk.Tk()
+        try:
+            icono = tk.PhotoImage(file="files/icon.ico")
+            self.root.iconphoto(True, icono)
+        except Exception as e:
+            print(f"No se pudo cargar el ícono: {e}")
         self.root.title("Analizador Léxico")
         self.root.geometry("1000x760")
         self.root.minsize(760, 560)
