@@ -43,7 +43,7 @@ class funcion_lex:
         while pos < n:
             c = texto[pos]
 
-            # --- ignorables: los maneja el lexer, no el autómata ---
+            # --- ignorables: los maneja el lexer ---
             if c == "\n":
                 linea += 1
                 col = 1
